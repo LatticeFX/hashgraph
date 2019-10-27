@@ -1,7 +1,7 @@
 import com.hedera.hashgraph.sdk.HederaException;
 import com.hedera.hashgraph.sdk.crypto.ed25519.*;
 
-public class generateKeys {
+public class GenerateKeys {
 
     public static void main(String[] args) throws HederaException {
 

@@ -8,15 +8,15 @@ import java.time.Duration;
 import java.util.Map;
 import com.hedera.hashgraph.sdk.account.AccountId;
 
-public class exampleTransfer {
+public class ExampleTransfer {
+
     public static void main(String[] args) throws HederaException, InterruptedException {
-        //Connect to client
+        // Connect to client
         // load the environment values from env file
         Dotenv dotenv = Dotenv.configure().filename(".env").ignoreIfMissing().load();
         var client = new Client(Map.of(AccountId.fromString(
                 dotenv.get("NODE_ID"))
-                , dotenv.get("NODE_ADDRESS")
-        )
+                , dotenv.get("NODE_ADDRESS"))
         );
         client.setOperator(AccountId.fromString(dotenv.get("OPERATOR_ID")), Ed25519PrivateKey.fromString(dotenv.get("OPERATOR_KEY")));
 
